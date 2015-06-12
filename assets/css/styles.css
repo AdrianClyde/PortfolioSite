@@ -1,4 +1,3 @@
-/* File compiled from SCSS file */
 .center {
   top: 50%;
   left: 50%;
@@ -16,7 +15,7 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.x-center, .selected:after, hr, .about img {
+.x-center, .selected:after, .about img {
   left: 50%;
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
@@ -61,15 +60,15 @@ header {
     @media only screen and (min-width: 40.063em) {
       header .wrapper {
         padding: 0 10%; } }
-  header span {
+  header .heading-wrapper {
     vertical-align: middle;
     width: 100%;
     display: inline-block; }
-    header span h1 {
+    header .heading-wrapper h1 {
       padding-top: 20px;
       color: white;
       font-size: 2rem; }
-    header span h2 {
+    header .heading-wrapper h2 {
       padding-bottom: 40px;
       color: white;
       font-size: 1.5rem;
@@ -117,10 +116,10 @@ header {
             color: #164666; }
 
 hr {
-  position: relative;
+  margin: 20px auto;
   border-width: 1px;
   border-color: #b3b0b2;
-  border-radius: 20px;
+  border-radius: 5px;
   width: 50%; }
 
 .banner {
@@ -163,25 +162,11 @@ hr {
 .portfolio .upower {
   background: url(../images/upower-pc.png) no-repeat;
   background-position: 40% 40%;
-  background-size: 80% auto;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-.portfolio .upower:hover {
-  -webkit-animation: filter-animation 2s forwards;
-  animation: filter-animation 2s forwards; }
-  .portfolio .upower:hover .upower-footer {
-    opacity: 1; }
+  background-size: 80% auto; }
 .portfolio .dci {
   background: url(../images/dci-pc.png) no-repeat;
   background-position: 40% 40%;
-  background-size: 80% auto;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1); }
-.portfolio .dci:hover {
-  -webkit-animation: filter-animation 2s forwards;
-  animation: filter-animation 2s forwards; }
-  .portfolio .dci:hover .dci-footer {
-    opacity: 1; }
+  background-size: 80% auto; }
 .portfolio .general-fade {
   -webkit-filter: grayscale(1);
   filter: grayscale(1); }
@@ -193,13 +178,17 @@ hr {
 
 @-webkit-keyframes filter-animation {
   0% {
-    -webkit-filter: grayscale(1); }
-  100% {
-    -webkit-filter: grayscale(0); } }
-@keyframes filter-animation {
-  0% {
+    -webkit-filter: grayscale(1);
     filter: grayscale(1); }
   100% {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0); } }
+@keyframes filter-animation {
+  0% {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1); }
+  100% {
+    -webkit-filter: grayscale(0);
     filter: grayscale(0); } }
 .linkedin {
   color: #2980B9; }
@@ -217,7 +206,7 @@ hr {
   border-radius: 50%;
   width: 140px;
   position: relative; }
-.about .resume {
+.about .resume a {
   color: #2980B9; }
 
 .name-anim {
